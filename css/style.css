@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Junge&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: "Junge", cursive;
+    user-select: none;
+}
+
+:root {
+    --primary-color: #cd853f;
+    --secondary-color: #f5f5f5;
+    --bg-color: rgba(205, 133, 63, .05);
+    --white: #fefefe;
+    --dark: #303030;
+    --text-color: #4a4a4a;
+    --border: rgba(205, 133, 63, .2);
+    --border-focus: #cd853f;
+}
+
+*::selection {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+*::-webkit-scrollbar {
+    height: .5rem;
+    width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 0;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+}
+
+body {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+
+/* global */
+button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    transition: .2s;
+    font-size: 1rem;
+}
+
+button:active {
+    transform: scale(.9);
+    filter: brightness(90%);
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+main {
+    width: 90%;
+    margin: auto;
+}
+p{
+    font-size: 13px;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    height: 80%;
+}
+
+header .logo {
+    height: 60px;
+}
+
+header button {
+    height: 45px;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1rem;
+    border: 1px solid var(--primary-color);
+    background-color: var(--bg-color);
+    border-radius: 50px;
+}
+
+header button span {
+    color: var(--primary-color);
+}
+
+nav{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 3em;
+}
+
+nav a{
+    opacity: .9;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+nav a:hover, .current{
+    opacity: 1;
+}
+.current{
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.menuOpenBtn{
+    height: 45px;
+    width: 45px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.menuOpenBtn span{
+    color: var(--white);
+}
+
+.right-header{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+/* Hero */
+.hero-container {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* background-color: red; */
+}
+
+.hero-content {
+    width: 50%;
+    margin: auto;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 1.6071rem + 2.8571vw, 3.75rem);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+
+.cta-btns {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.cta-btns button {
+    width: 250px;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: .2s;
+}
+
+.cta-btns button:active {
+    transform: scale(.9);
+    filter: brightness(90%);
+}
+
+.feeBtn {
+    background-color:var(--bg-color);
+    border: 1px solid var(--primary-color);
+}
+
+.feeBtn span {
+    color: var(--primary-color);
+}
+
+.fillBtn {
+    background-color: var(--primary-color);
+    border: 0;
+}
+
+.fillBtn span {
+    color: var(--white);
+}
+
+/* Fee page */
+.container{
+    width: 50%;
+    margin: 2em auto;
+}
+.container h2,
+.application-form h2{
+    margin-bottom: 2em;
+    color: var(--primary-color);
+}
+
+.container p{
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.feePageBtn{
+    margin-top: 1em;
+    padding: 1em 2em;
+    border-radius: 50px;
+}
+.mark{
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Message */
+.message form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5em;
+    gap: .5rem;
+}
+.input-control label{
+    padding-left: .2rem;
+}
+.input-control input{
+    padding: .75rem 1rem;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+}
+
+.input-control input:focus{
+    border-color: var(--border-focus);
+}
+
+.input-control textarea{
+    padding: 1rem;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+}
+
+.input-control textarea:focus{
+    border-color: var(--border-focus);
+}
+
+.message button{
+    padding: .85rem;
+    border-radius: 50px;
+    margin-top: 1rem;
+}
+
+/* mobile nav */
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--white);
+    padding: 2rem;
+    transition: .2s;
+}
+.mobile-nav.active{
+    left: 0;
+}
+
+.menu{
+    margin-top: 5em;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+.menu ul a{
+    display: block;
+    padding: 1rem;
+    margin-bottom: .5rem;
+}
+
+.menu ul a:hover{
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+.menu ul a.active{
+    background-color: var(--bg-color);
+    border: 1px solid var(--bg-color);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+
+.menuCloseBtn{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+.menuCloseBtn span{
+    color: var(--white);
+}
+
+/* footer */
+
+footer{
+    margin-top: 4em;
+    padding: 2em;
+    background-color: var(--primary-color);
+}
+
+footer p{
+    text-align: center;
+    color: var(--white);
+    margin-top: 2rem;
+}
+footer p span{
+    color: var(--white);
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    gap: 2rem;
+}
+
+.footer-logo{
+    height: 100px;
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 30% 0 30% 0;
+}
+.footer-logo img{
+    height: 100%;
+}
+
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrap h2{
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.wrap ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: .5rem;
+}
+.wrap ul a{
+    color: var(--white);
+}
+.wrap ul a:hover{
+    opacity: .7;
+}
+
+/* loader */
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #fefefe;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.loader.active{
+    display: flex;
+}
+
+
+/* Responsiveness */
+@media (max-width:786px) {
+
+    .container{
+        width: 100%;
+    }
+   
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .cta-btns {
+        width: 50%;
+        margin: 2em auto;
+        flex-direction: column-reverse;
+    }
+
+    .extended-text {
+        display: none;
+    }
+
+    header{
+        padding: .5rem 1rem;
+    }
+
+    header .logo {
+        height: 50px;
+    }
+
+    nav{
+        display: none;
+    }
+    .menuOpenBtn{
+        display: flex;
+    }
+}
+
+@media (max-width:300px) {
+    header .logo {
+        height: 40px;
+    }
+    header {
+        padding: .5rem .75rem;
+    }
+    .right-header{
+        gap: .5rem;
+    }
+    header button{
+        display: none;
+    }
+    .cta-btns{
+        width: 100%;
+        align-items: unset;
+    }
+    .cta-btns button{
+        width: 100%; 
+        height: 50px; 
+    }
+}

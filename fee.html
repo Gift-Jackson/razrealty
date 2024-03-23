@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unlock your dream home today with Raz Realty. Complete our seamless online application form and begin your journey towards homeownership.">
+    <meta name="keywords" content="real estate, Raz Realty, homes for rent, online application">
+    <meta name="author" content="Raz Realty">
+    <meta property="og:image" content="./assets/logo.jpg">
+    <title>Raz Realty</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- material icon -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/logo.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- loader -->
+    <div class="loader active">
+        <img src="./assets/loader.svg" alt="">
+    </div>
+
+    <header>
+        <a href="/">
+            <div class="brand">
+                <img class="logo" src="./assets/logo.png" alt="Raz Realty logo">
+            </div>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="/">Welcome</a></li>
+                <li><a class="current" href="./fee.html">Fee Policy</a></li>
+                <li><a href="./application.html">Application</a></li>
+                <li><a href="./message.html">Message</a></li>
+            </ul>
+        </nav>
+
+        <div class="right-header">
+            <a href="mailto:razrealtymanagement@outlook.com">
+                <button>
+                    <span class="material-symbols-outlined">
+                        alternate_email
+                    </span>
+                    <span class="extended-text">Contacts</span>
+                </button>
+            </a>
+            <div class="menuOpenBtn">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="container">
+            <h2>Application Fee Policy</h2>
+            <p>
+                There is a compulsory <span class="mark">Two hundred dollars ($200)</span> application fee attached to this form. We understand it is a large fee
+                but it is charged due to the fact that many applicants set up viewings and end up not showing, thus,
+                wasting resources. However, this fee is refunded on viewing day. <br><br>
+                We will not be held accountable for any additional charge by Agents/Landlords in the course of
+                this transaction.
+            </p>
+
+            <a href="./application.html">
+                <button class="fillBtn feePageBtn">
+                    <span>Apply Now</span>
+                    <span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <div class="mobile-nav">
+        <div class="menuCloseBtn">
+            <span class="material-symbols-outlined">
+                close
+            </span>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="/">Welcome</a></li>
+                <li><a class="active" href="./fee.html">Fee Policy</a></li>
+                <li><a href="./application.html">Application</a></li>
+                <li><a href="./message.html">Message</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="wrapper">
+            <div class="wrap">
+                <div class="footer-logo">
+                    <img src="./assets/logo.png" alt="Douglas Elliman Real Estate logo">
+                </div>
+            </div>
+            <div class="wrap">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="/">Welcome</a></li>
+                    <li><a href="./fee.html">Fee Policy</a></li>
+                    <li><a href="./application.html">Application</a></li>
+                    <li><a href="./message.html">Message</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; <span id="currentYear"></span> Raz Realty . All rights reserved.</p>
+    </footer>
+
+
+
+    <!-- javascript -->
+    <script src="./js/app.js"></script>
+    <script src="./js/transition.js"></script>
+    <script>
+
+        const mobileNav = document.querySelector(".mobile-nav");
+        const menuOpenBtn = document.querySelector(".menuOpenBtn");
+        const menuCloseBtn = document.querySelector(".menuCloseBtn");
+
+        function openMenu() {
+            mobileNav.classList.add("active")
+        }
+        function closeMenu() {
+            mobileNav.classList.remove("active")
+        }
+
+        menuOpenBtn.addEventListener("click", openMenu)
+        menuCloseBtn.addEventListener("click", closeMenu)
+
+        //Code to update the footer year
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+
+    </script>
+</body>
+
+</html>

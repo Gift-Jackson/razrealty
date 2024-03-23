@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unlock your dream home today with Raz Realty. Complete our seamless online application form and begin your journey towards homeownership.">
+    <meta name="keywords" content="real estate, Raz Realty, homes for rent, online application">
+    <meta name="author" content="Raz Realty">
+    <meta property="og:image" content="./assets/logo.jpg">
+    <title>Raz Realty</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/logo.jpg" type="image/x-icon">
+
+    <!-- SIGNATURE API -->
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <!-- material icon -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- loader -->
+    <div class="loader active">
+        <img src="./assets/loader.svg" alt="">
+    </div>
+
+    <header>
+        <a href="/">
+            <div class="brand">
+                <img class="logo" src="./assets/logo.png" alt="Raz Realty logo">
+            </div>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="/">Welcome</a></li>
+                <li><a href="./fee.html">Fee Policy</a></li>
+                <li><a class="current" href="./application.html">Application</a></li>
+                <li><a href="./message.html">Message</a></li>
+            </ul>
+        </nav>
+
+        <div class="right-header">
+            <a href="mailto:razrealtymanagement@outlook.com">
+                <button>
+                    <span class="material-symbols-outlined">
+                        alternate_email
+                    </span>
+                    <span class="extended-text">Contacts</span>
+                </button>
+            </a>
+            <div class="menuOpenBtn">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="application-form">
+            <h2>Application Form</h2>
+
+            <form action="https://formsubmit.co/razrealtymanagement@outlook.com" method="POST">
+                <input type="hidden" name="_subject" value="Application Form Submission">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_autoresponse" value="Your application has been received!">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://razrealty.netlify.app/submitted.html">
+                <div class="form-container" data-aos="fade-up" data-aos-delay="300">
+                    <div class="form-title">Apartment Information:</div>
+                    <div class="form-grid">
+                        <div class="input-control">
+                            <label for="date">Date:</label>
+                            <input type="text" name="date" id="date" placeholder="DD/MM/YYYY" onfocus="this.type='date'" onblur="this.type='text'" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="broker_name">Broker Name:</label>
+                            <input type="text" name="broker_name" id="broker_name" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="building_address">Building Address:</label>
+                            <input type="text" name="building_address" id="building_address" required
+                                autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="apartment">Apartment:</label>
+                            <input type="text" name="apartment" id="apartment" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="lease_term">Lease Term/ Start Date:</label>
+                            <input type="text" name="lease_term" id="lease_term" placeholder="DD/MM/YYYY" onfocus="this.type='date'" onblur="this.type='text'" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="rent">Monthly Rent:</label>
+                            <input type="number" name="rent" id="rent" autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="length_of_lease">Length of Lease:</label>
+                            <input type="text" name="length_of_lease" id="length_of_lease" required autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Applicant Info -->
+                <div class="form-container" data-aos="fade-up" data-aos-delay="300">
+                    <div class="form-title">Applicant Information:</div>
+                    <div class="form-grid">
+                        <div class="input-control">
+                            <label for="name">Fullname:</label>
+                            <input type="text" name="name" id="name" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="dob">Date of Birth:</label>
+                            <input type="text" name="dob" id="dob" placeholder="DD/MM/YYYY" onfocus="this.type='date'" onblur="this.type='text'" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="current_address">Current Address:</label>
+                            <input type="text" name="current_address" id="current_address" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="city">City:</label>
+                            <input type="text" name="city" id="city" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="state">State:</label>
+                            <input type="text" name="state" id="state" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="zip">Zip Code:</label>
+                            <input type="text" name="zip" id="zip">
+                        </div>
+                        <div class="input-control">
+                            <label for="current_address">Monthly Rent/ Mortgage Paid:</label>
+                            <input type="text" name="current_mortgage" id="current_mortgage" value="$" required
+                                autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="ssn">Social Security Number (SSN):</label>
+                            <input type="text" name="ssn" id="ssn" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="cell_number">Cell Number:</label>
+                            <input type="text" name="cell_number" id="cell_number" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="email">E-mail Address:</label>
+                            <input type="email" name="email" id="email" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="landlord_info">Landlord Name/ Number:</label>
+                            <input type="text" name="landlord_info" id="landlord_info" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="length_of_tenancy">Length of Tenancy:</label>
+                            <input type="text" name="length_of_tenancy" id="length_of_tenancy" required
+                                autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-subtitle">If Less Than 2 years:</div>
+                    <div class="form-grid">
+                        <div class="input-control">
+                            <label for="current_address">Current Address:</label>
+                            <input type="text" name="current_address" id="current_address" autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="city">City:</label>
+                            <input type="text" name="city" id="city" autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="state">State:</label>
+                            <input type="text" name="state" id="state" autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="zip">Zip Code:</label>
+                            <input type="text" name="zip" id="zip" autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="current_address">Monthly Rent/ Mortgage Paid:</label>
+                            <input type="text" name="current_mortgage" id="current_mortgage" value="$"
+                                autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="landlord_info">Landlord Name/ Number:</label>
+                            <input type="text" name="landlord_info" id="landlord_info" autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="length_of_tenancy">Length of Tenancy:</label>
+                            <input type="text" name="length_of_tenancy" id="length_of_tenancy" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Employment Information -->
+                <div class="form-container" data-aos="fade-up" data-aos-delay="300">
+                    <div class="form-title">Employment Information:</div>
+                    <div class="form-grid">
+                        <div class="input-control">
+                            <label for="present_employer">Present Employer:</label>
+                            <input type="text" name="present_employer" id="present_employer" required
+                                autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="position_held">Position held:</label>
+                            <input type="text" name="position_held" id="position_held" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="supervisor">Supervisor:</label>
+                            <input type="text" name="supervisor" id="supervisor" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="length_of_employment">Length of Employment:</label>
+                            <input type="text" name="length_of_employment" id="length_of_employment" required
+                                autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="salary">Salary:</label>
+                            <input type="text" name="salary" id="salary" required autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="phone_number">Phone Number:</label>
+                            <input type="text" name="phone_number" id="phone_number" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-subtitle">If Less Than 2 years:</div>
+                    <div class="form-grid">
+                        <div class="input-control">
+                            <label for="previous_employer">Previous Employer:</label>
+                            <input type="text" name="previous_employer" id="previous_employer" autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="position_held">Position held:</label>
+                            <input type="text" name="position_held" id="position_held" autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="supervisor">Supervisor Name/ Number:</label>
+                            <input type="text" name="supervisor" id="supervisor" autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="length_of_employment">Length of Employment:</label>
+                            <input type="text" name="length_of_employment" id="length_of_employment" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-container" data-aos="fade-up" data-aos-delay="300">
+                    <div class="form-title">Bank Information:</div>
+                    <div class="form-grid">
+                        <div class="input-control center">
+                            <input type="radio" name="bank_type" id="check" value="Checking Account" required>
+                            <label for="check">Checking Account</label>
+                        </div>
+                        <div class="input-control center">
+                            <input type="radio" name="bank_type" id="saving" value="Saving Account" required>
+                            <label for="saving">Saving Account</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-container" data-aos="fade-up" data-aos-delay="300">
+                    <div class="form-title">Other Persons to Occupy Apartment (If any):</div>
+                    <div class="form-grid">
+                        <div class="division">
+                            <div class="input-control">
+                                <label for="other-name">Name:</label>
+                                <input type="text" name="other-name" id="other-name-1" autocomplete="off">
+                            </div>
+                            <div class="input-control">
+                                <label for="relationship">Relationship:</label>
+                                <input type="text" name="relationship" id="relationship-1" autocomplete="off">
+                            </div>
+                            <div class="input-control">
+                                <label for="age">Age:</label>
+                                <input type="number" name="age" id="age-1" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="division">
+                            <div class="input-control">
+                                <label for="other-name">Name:</label>
+                                <input type="text" name="other-name" id="other-name-2" autocomplete="off">
+                            </div>
+                            <div class="input-control">
+                                <label for="relationship">Relationship:</label>
+                                <input type="text" name="relationship" id="relationship-2" autocomplete="off">
+                            </div>
+                            <div class="input-control">
+                                <label for="age">Age:</label>
+                                <input type="number" name="age" id="age-2" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="division">
+                            <div class="input-control">
+                                <label for="other-name">Name:</label>
+                                <input type="text" name="other-name" id="other-name-3">
+                            </div>
+                            <div class="input-control">
+                                <label for="relationship">Relationship:</label>
+                                <input type="text" name="relationship" id="relationship-3" autocomplete="off">
+                            </div>
+                            <div class="input-control">
+                                <label for="age">Age:</label>
+                                <input type="number" name="age" id="age-3" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-container" data-aos="fade-up" data-aos-delay="300">
+                    <div class="form-title">Emergency Contact:</div>
+                    <div class="form-grid">
+                        <div class="input-control">
+                            <label for="emergency_number">Phone Number:</label>
+                            <input type="text" name="emergency_number" id="emergency_number" required
+                                autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="emergency_address">Address:</label>
+                            <input type="text" name="emergency_address" id="emergency_address" required
+                                autocomplete="off">
+                        </div>
+                        <div class="input-control">
+                            <label for="emergency_relationship">Relationship:</label>
+                            <input type="text" name="emergency_relationship" id="emergency_relationship" required
+                                autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-container" data-aos="fade-up" data-aos-delay="300">
+                    <div class="form-title">References:</div>
+                    <div class="form-grid">
+                        <div class="division">
+                            <div class="input-control">
+                                <label for="ref_name">Name:</label>
+                                <input type="text" name="ref_name" id="ref_name-1">
+                            </div>
+                            <div class="input-control">
+                                <label for="ref_number">Phone Number:</label>
+                                <input type="text" name="ref_number" id="ref_number-1">
+                            </div>
+                        </div>
+                        <div class="division">
+                            <div class="input-control">
+                                <label for="ref_name">Name:</label>
+                                <input type="text" name="ref_name" id="ref_name-2">
+                            </div>
+                            <div class="input-control">
+                                <label for="ref_number">Phone Number:</label>
+                                <input type="text" name="ref_number" id="ref_number-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-container" data-aos="fade-up" data-aos-delay="300">
+                    <div class="form-title">Declaration/ Signature:</div>
+                    <article>
+                        I hereby warrant that all my representation set forth above is true. I further represent that I
+                        am not renting a room or an apartment under any other name, nor have I ever been dispossession
+                        from any apartment, nor am I now being dispossessed. Do hereby certify that I am over 18 years
+                        of age. The landlord will in no event be bound, nor will possession be given and until leases
+                        executed by the landlord. By signing below, applicant(s) authorizes Douglas Elliman Real Estate
+                        to perform any credit checks or reference checks in connection with this applicant. 
+                        <br><br>
+                        Signature of
+                        applicant indicating that the above statement is accurate and have been read.
+                    </article>
+
+                    <div class="input-control">
+                        <label>Sign Here:</label>
+                        <canvas id="signature-pad" class="signatureCanvas" height=150
+                            style="touch-action: none;"></canvas>
+                    </div>
+                </div>
+
+                <button type="submit" class="fillBtn submitBtn">
+                    <span>Submit Application</span>
+                    <span class="material-symbols-outlined">
+                        done
+                    </span>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <div class="mobile-nav">
+        <div class="menuCloseBtn">
+            <span class="material-symbols-outlined">
+                close
+            </span>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="/">Welcome</a></li>
+                <li><a href="./fee.html">Fee Policy</a></li>
+                <li><a class="active" href="./application.html">Application</a></li>
+                <li><a href="./message.html">Message</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="overlay close-btn">
+        <div class="modal">
+            <h1>Application Fee <span class="mark">Policy</span></h1>
+            <p>Do you want to read the Application Fee Policy now?</p>
+            <div class="btns">
+                <button class="close-btn">Already did!</button>
+                <button class="close-btn">No, later!</button>
+                <button class="open-btn">Yes, sure!</button>
+
+            </div>
+            <span class="material-symbols-outlined close close-btn">
+                close
+            </span>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="wrapper">
+            <div class="wrap">
+                <div class="footer-logo">
+                    <img src="./assets/logo.png" alt="Douglas Elliman Real Estate logo">
+                </div>
+            </div>
+            <div class="wrap">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="/">Welcome</a></li>
+                    <li><a href="./fee.html">Fee Policy</a></li>
+                    <li><a href="./application.html">Application</a></li>
+                    <li><a href="./message.html">Message</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; <span id="currentYear"></span> Raz Realty . All rights reserved.</p>
+    </footer>
+
+
+
+
+    <!-- Javascript -->
+    <script src="./js/app.js"></script>
+    <script src="./js/transition.js"></script>
+    <script>
+        var canvas = document.getElementById('signature-pad');
+        var signaturePad = new SignaturePad(canvas);
+    </script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <script>
+
+        const mobileNav = document.querySelector(".mobile-nav");
+        const menuOpenBtn = document.querySelector(".menuOpenBtn");
+        const menuCloseBtn = document.querySelector(".menuCloseBtn");
+
+        function openMenu() {
+            mobileNav.classList.add("active")
+        }
+        function closeMenu() {
+            mobileNav.classList.remove("active")
+        }
+
+        menuOpenBtn.addEventListener("click", openMenu)
+        menuCloseBtn.addEventListener("click", closeMenu)
+
+        //Code to update the footer year
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+
+    </script>
+</body>
+
+</html>
