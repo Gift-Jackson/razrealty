@@ -50,8 +50,16 @@
     font-size: 14px;
 }
 
+.input-control input[type="date"]{
+    width: 100%;
+}
+
 .center{
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: unset;
 }
 
 input[type="radio"]{
@@ -196,5 +204,8 @@ form button{
     }
     .overlay .modal h1{
         font-size: 30px;
+    }
+    .center{
+        justify-content: unset;
     }
 }
