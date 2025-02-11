@@ -14,7 +14,7 @@
 :root {
     --primary-color: #cd853f;
     --secondary-color: #f5f5f5;
-    --bg-color: rgba(205, 133, 63, .05);
+    --bg-color: rgba(192, 133, 75, 0.05);
     --white: #fefefe;
     --dark: #303030;
     --text-color: #4a4a4a;
